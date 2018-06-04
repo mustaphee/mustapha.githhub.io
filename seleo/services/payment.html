@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Andada">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Averia+Serif+Libre:300,400">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/country-select-js/2.0.1/css/countrySelect.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/country-select-js/2.0.1/css/countrySelect.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paymentfont/1.2.5/css/paymentfont.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg navigation-clean-button">
+        <div class="container"><a class="navbar-brand float-left" href="index.html">Soleo Together<img src="../assets/img/logo copy.png" class="logo"></a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div
+                class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html"><strong>Home</strong></a></li>
+                    <li class="dropdown"><a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="Services.html"><strong>Services</strong></a>
+                        <div class="dropdown-menu dropdown-menu-left" role="menu"><a class="dropdown-item" role="presentation" href="#">Home Services</a><a class="dropdown-item" role="presentation" href="#">Tutoring</a><a class="dropdown-item" role="presentation" href="#"><strong>Search Page&nbsp;</strong></a></div>
+                    </li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="about.html"><strong>About</strong></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="contact.html"><strong>Contact</strong></a></li>
+                </ul><a class="btn btn-primary Login" role="button" href="login.html">LOGIN</a><a class="btn btn-primary signup" role="button" href="signup.html">SIGN UP</a></div>
+        </div>
+    </nav>
+    <section>
+        <div class="row">
+            <div class="col-xl-12">
+                <ul class="nav nav-pills" style="width:1068px;">
+                    <li class="nav-item"><a class="nav-link active" href="#">First Item</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Second Item</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Third Item</a></li>
+                </ul>
+            </div>
+        </div>
+        <section id="search-col"></section>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row" id="reviewpay">
+                <div class="col-md-6 col-lg-4 review" style="height:850px;">
+                    <div class="row section1">
+                        <div class="col bookingdetails">
+                            <div class="row">
+                                <div class="col bookingdetails">
+                                    <h5>Your booking details</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="p.section1">{$name service_provider$} &nbsp;{$date select$} at {$time select$} to address : {$address service_seeker$}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col bookingdetails" style="height:134px;margin:0px;">
+                            <h5>Your selection</h5>
+                            <p>{$service_duration$} {$service_type$}</p>
+                        </div>
+                    </div>
+                    <div class="row bookingdetails">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col bookingdetails" style="height:145px;">
+                                    <h5>How much will it cost to cancel?</h5>
+                                    <p class="cancellation">Free cancelation until {$cancel_free$}&nbsp;</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col bookingdetails" style="height:368px;">
+                            <div class="row">
+                                <div class="col">
+                                    <h5>Your price summary</h5>
+                                    <p>You'll pay : &nbsp;{$service_duration$}*{$price$} &nbsp;= {$pay_price$}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="height:850px;background-color:rgba(185,223,235,0.29);">
+                    <div class="row">
+                        <div class="col-xl-5 offset-xl-0">
+                            <div id="pay">
+                                <p class="pay"><strong>Country</strong></p>
+<select>
+	<option value="AF">Afghanistan</option>
+	<option value="AX">Åland Islands</option>
+	<option value="AL">Albania</option>
+	<option value="DZ">Algeria</option>
+	<option value="AS">American Samoa</option>
+	<option value="AD">Andorra</option>
+	<option value="AO">Angola</option>
+	<option value="AI">Anguilla</option>
+	<option value="AQ">Antarctica</option>
+	<option value="AG">Antigua and Barbuda</option>
+	<option value="AR">Argentina</option>
+	<option value="AM">Armenia</option>
+	<option value="AW">Aruba</option>
+	<option value="AU">Australia</option>
+	<option value="AT">Austria</option>
+	<option value="AZ">Azerbaijan</option>
+	<option value="BS">Bahamas</option>
+	<option value="BH">Bahrain</option>
+	<option value="BD">Bangladesh</option>
+	<option value="BB">Barbados</option>
+	<option value="BY">Belarus</option>
+	<option value="BE">Belgium</option>
+	<option value="BZ">Belize</option>
+	<option value="BJ">Benin</option>
+	<option value="BM">Bermuda</option>
+	<option value="BT">Bhutan</option>
+	<option value="BO">Bolivia, Plurinational State of</option>
+	<option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+	<option value="BA">Bosnia and Herzegovina</option>
+	<option value="BW">Botswana</option>
+	<option value="BV">Bouvet Island</option>
+	<option value="BR">Brazil</option>
+	<option value="IO">British Indian Ocean Territory</option>
+	<option value="BN">Brunei Darussalam</option>
+	<option value="BG">Bulgaria</option>
+	<option value="BF">Burkina Faso</option>
+	<option value="BI">Burundi</option>
+	<option value="KH">Cambodia</option>
+	<option value="CM">Cameroon</option>
+	<option value="CA">Canada</option>
+	<option value="CV">Cape Verde</option>
+	<option value="KY">Cayman Islands</option>
+	<option value="CF">Central African Republic</option>
+	<option value="TD">Chad</option>
+	<option value="CL">Chile</option>
+	<option value="CN">China</option>
+	<option value="CX">Christmas Island</option>
+	<option value="CC">Cocos (Keeling) Islands</option>
+	<option value="CO">Colombia</option>
+	<option value="KM">Comoros</option>
+	<option value="CG">Congo</option>
+	<option value="CD">Congo, the Democratic Republic of the</option>
+	<option value="CK">Cook Islands</option>
+	<option value="CR">Costa Rica</option>
+	<option value="CI">Côte d'Ivoire</option>
+	<option value="HR">Croatia</option>
+	<option value="CU">Cuba</option>
+	<option value="CW">Curaçao</option>
+	<option value="CY">Cyprus</option>
+	<option value="CZ">Czech Republic</option>
+	<option value="DK">Denmark</option>
+	<option value="DJ">Djibouti</option>
+	<option value="DM">Dominica</option>
+	<option value="DO">Dominican Republic</option>
+	<option value="EC">Ecuador</option>
+	<option value="EG">Egypt</option>
+	<option value="SV">El Salvador</option>
+	<option value="GQ">Equatorial Guinea</option>
+	<option value="ER">Eritrea</option>
+	<option value="EE">Estonia</option>
+	<option value="ET">Ethiopia</option>
+	<option value="FK">Falkland Islands (Malvinas)</option>
+	<option value="FO">Faroe Islands</option>
+	<option value="FJ">Fiji</option>
+	<option value="FI">Finland</option>
+	<option value="FR">France</option>
+	<option value="GF">French Guiana</option>
+	<option value="PF">French Polynesia</option>
+	<option value="TF">French Southern Territories</option>
+	<option value="GA">Gabon</option>
+	<option value="GM">Gambia</option>
+	<option value="GE">Georgia</option>
+	<option value="DE">Germany</option>
+	<option value="GH">Ghana</option>
+	<option value="GI">Gibraltar</option>
+	<option value="GR">Greece</option>
+	<option value="GL">Greenland</option>
+	<option value="GD">Grenada</option>
+	<option value="GP">Guadeloupe</option>
+	<option value="GU">Guam</option>
+	<option value="GT">Guatemala</option>
+	<option value="GG">Guernsey</option>
+	<option value="GN">Guinea</option>
+	<option value="GW">Guinea-Bissau</option>
+	<option value="GY">Guyana</option>
+	<option value="HT">Haiti</option>
+	<option value="HM">Heard Island and McDonald Islands</option>
+	<option value="VA">Holy See (Vatican City State)</option>
+	<option value="HN">Honduras</option>
+	<option value="HK">Hong Kong</option>
+	<option value="HU">Hungary</option>
+	<option value="IS">Iceland</option>
+	<option value="IN">India</option>
+	<option value="ID">Indonesia</option>
+	<option value="IR">Iran, Islamic Republic of</option>
+	<option value="IQ">Iraq</option>
+	<option value="IE">Ireland</option>
+	<option value="IM">Isle of Man</option>
+	<option value="IL">Israel</option>
+	<option value="IT">Italy</option>
+	<option value="JM">Jamaica</option>
+	<option value="JP">Japan</option>
+	<option value="JE">Jersey</option>
+	<option value="JO">Jordan</option>
+	<option value="KZ">Kazakhstan</option>
+	<option value="KE">Kenya</option>
+	<option value="KI">Kiribati</option>
+	<option value="KP">Korea, Democratic People's Republic of</option>
+	<option value="KR">Korea, Republic of</option>
+	<option value="KW">Kuwait</option>
+	<option value="KG">Kyrgyzstan</option>
+	<option value="LA">Lao People's Democratic Republic</option>
+	<option value="LV">Latvia</option>
+	<option value="LB">Lebanon</option>
+	<option value="LS">Lesotho</option>
+	<option value="LR">Liberia</option>
+	<option value="LY">Libya</option>
+	<option value="LI">Liechtenstein</option>
+	<option value="LT">Lithuania</option>
+	<option value="LU">Luxembourg</option>
+	<option value="MO">Macao</option>
+	<option value="MK">Macedonia, the former Yugoslav Republic of</option>
+	<option value="MG">Madagascar</option>
+	<option value="MW">Malawi</option>
+	<option value="MY">Malaysia</option>
+	<option value="MV">Maldives</option>
+	<option value="ML">Mali</option>
+	<option value="MT">Malta</option>
+	<option value="MH">Marshall Islands</option>
+	<option value="MQ">Martinique</option>
+	<option value="MR">Mauritania</option>
+	<option value="MU">Mauritius</option>
+	<option value="YT">Mayotte</option>
+	<option value="MX">Mexico</option>
+	<option value="FM">Micronesia, Federated States of</option>
+	<option value="MD">Moldova, Republic of</option>
+	<option value="MC">Monaco</option>
+	<option value="MN">Mongolia</option>
+	<option value="ME">Montenegro</option>
+	<option value="MS">Montserrat</option>
+	<option value="MA">Morocco</option>
+	<option value="MZ">Mozambique</option>
+	<option value="MM">Myanmar</option>
+	<option value="NA">Namibia</option>
+	<option value="NR">Nauru</option>
+	<option value="NP">Nepal</option>
+	<option value="NL">Netherlands</option>
+	<option value="NC">New Caledonia</option>
+	<option value="NZ">New Zealand</option>
+	<option value="NI">Nicaragua</option>
+	<option value="NE">Niger</option>
+	<option value="NG">Nigeria</option>
+	<option value="NU">Niue</option>
+	<option value="NF">Norfolk Island</option>
+	<option value="MP">Northern Mariana Islands</option>
+	<option value="NO">Norway</option>
+	<option value="OM">Oman</option>
+	<option value="PK">Pakistan</option>
+	<option value="PW">Palau</option>
+	<option value="PS">Palestinian Territory, Occupied</option>
+	<option value="PA">Panama</option>
+	<option value="PG">Papua New Guinea</option>
+	<option value="PY">Paraguay</option>
+	<option value="PE">Peru</option>
+	<option value="PH">Philippines</option>
+	<option value="PN">Pitcairn</option>
+	<option value="PL">Poland</option>
+	<option value="PT">Portugal</option>
+	<option value="PR">Puerto Rico</option>
+	<option value="QA">Qatar</option>
+	<option value="RE">Réunion</option>
+	<option value="RO">Romania</option>
+	<option value="RU">Russian Federation</option>
+	<option value="RW">Rwanda</option>
+	<option value="BL">Saint Barthélemy</option>
+	<option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+	<option value="KN">Saint Kitts and Nevis</option>
+	<option value="LC">Saint Lucia</option>
+	<option value="MF">Saint Martin (French part)</option>
+	<option value="PM">Saint Pierre and Miquelon</option>
+	<option value="VC">Saint Vincent and the Grenadines</option>
+	<option value="WS">Samoa</option>
+	<option value="SM">San Marino</option>
+	<option value="ST">Sao Tome and Principe</option>
+	<option value="SA">Saudi Arabia</option>
+	<option value="SN">Senegal</option>
+	<option value="RS">Serbia</option>
+	<option value="SC">Seychelles</option>
+	<option value="SL">Sierra Leone</option>
+	<option value="SG">Singapore</option>
+	<option value="SX">Sint Maarten (Dutch part)</option>
+	<option value="SK">Slovakia</option>
+	<option value="SI">Slovenia</option>
+	<option value="SB">Solomon Islands</option>
+	<option value="SO">Somalia</option>
+	<option value="ZA">South Africa</option>
+	<option value="GS">South Georgia and the South Sandwich Islands</option>
+	<option value="SS">South Sudan</option>
+	<option value="ES">Spain</option>
+	<option value="LK">Sri Lanka</option>
+	<option value="SD">Sudan</option>
+	<option value="SR">Suriname</option>
+	<option value="SJ">Svalbard and Jan Mayen</option>
+	<option value="SZ">Swaziland</option>
+	<option value="SE">Sweden</option>
+	<option value="CH">Switzerland</option>
+	<option value="SY">Syrian Arab Republic</option>
+	<option value="TW">Taiwan, Province of China</option>
+	<option value="TJ">Tajikistan</option>
+	<option value="TZ">Tanzania, United Republic of</option>
+	<option value="TH">Thailand</option>
+	<option value="TL">Timor-Leste</option>
+	<option value="TG">Togo</option>
+	<option value="TK">Tokelau</option>
+	<option value="TO">Tonga</option>
+	<option value="TT">Trinidad and Tobago</option>
+	<option value="TN">Tunisia</option>
+	<option value="TR">Turkey</option>
+	<option value="TM">Turkmenistan</option>
+	<option value="TC">Turks and Caicos Islands</option>
+	<option value="TV">Tuvalu</option>
+	<option value="UG">Uganda</option>
+	<option value="UA">Ukraine</option>
+	<option value="AE">United Arab Emirates</option>
+	<option value="GB">United Kingdom</option>
+	<option value="US">United States</option>
+	<option value="UM">United States Minor Outlying Islands</option>
+	<option value="UY">Uruguay</option>
+	<option value="UZ">Uzbekistan</option>
+	<option value="VU">Vanuatu</option>
+	<option value="VE">Venezuela, Bolivarian Republic of</option>
+	<option value="VN">Viet Nam</option>
+	<option value="VG">Virgin Islands, British</option>
+	<option value="VI">Virgin Islands, U.S.</option>
+	<option value="WF">Wallis and Futuna</option>
+	<option value="EH">Western Sahara</option>
+	<option value="YE">Yemen</option>
+	<option value="ZM">Zambia</option>
+	<option value="ZW">Zimbabwe</option>
+</select>
+                                <p class="tel"><strong>Telephone ( mobile number Prefered)</strong></p><input type="tel"></div>
+                        </div>
+                        <div class="col offset-xl-2" id="user">
+                            <p class="user"><strong>Name</strong></p>
+                            <p class="user">{$name service_seeker$}</p>
+                            <p class="user"><strong>Email</strong></p>
+                            <p class="user">{$email service_seeker$}</p>
+                        </div>
+                    </div>
+                    <div class="row booking">
+                        <div class="col">
+                            <h4 class="pay.head"><i class="fa fa-lock"></i>&nbsp; Complete your booking</h4>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="row msg">
+                            <div class="col">
+                                <p class="msg">&nbsp; &nbsp;<i class="fa fa-info-circle"></i> &nbsp; &nbsp; &nbsp; Your card won't be charged, we only need your card details to guarantee your booking</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h5><strong>Use one of your stored cards</strong></h5>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Credit/debit card type&nbsp;</th>
+                                    <th>Card number</th>
+                                    <th>Card holder's name&nbsp;</th>
+                                    <th>Expiry date&nbsp;</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="form-check"><input class="form-check-input card" type="checkbox" style="width:60px;height:24px;"><label class="form-check-label" for="formCheck-1">Visa</label></div>
+                                    </td>
+                                    <td>&nbsp;<i class="fa fa-circle cardhide"></i><i class="fa fa-circle cardhide"></i><i class="fa fa-circle cardhide"></i><i class="fa fa-circle cardhide"></i>{$last4dig$}</td>
+                                    <td>&nbsp;{$cardholdername$}</td>
+                                    <td>{$card_expiry$}</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-check"><input class="form-check-input card" type="checkbox" style="width:60px;height:24px;"><label class="form-check-label" for="formCheck-1">Visa</label></div>
+                                    </td>
+                                    <td>&nbsp;<i class="fa fa-circle cardhide"></i><i class="fa fa-circle cardhide"></i><i class="fa fa-circle cardhide"></i><i class="fa fa-circle cardhide"></i>{$last4dig$}</td>
+                                    <td>&nbsp;{$cardholdername$}</td>
+                                    <td>{$card_expiry$}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h5><strong>Use another card &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</strong></h5>
+                    <div id="cardtype">
+                        <div class="row cardinput">
+                            <div class="col-xl-4">
+                                <p class="carddetails"><strong>CardHolder's Name</strong></p><input type="text" style="width:236px;">
+                                <p><strong>Card Type</strong></p>
+                                <div style="height:25px;"><input type="checkbox" style="width:40px;height:20px;"><label>Visa</label></div>
+                                <div><input type="checkbox" style="width:40px;height:20px;"><label style="margin:0;height:0px;">MasterCard</label></div>
+                                <div><input type="checkbox" style="width:40px;"><label>American Express</label></div>
+                                <div id="carddetails">
+                                    <p class="carddetails"><strong>Card number</strong></p><input type="text" style="width:236px;"></div>
+                                <div id="carddetails"></div>
+                                <div id="carddetails">
+                                    <p class="carddetails"><strong>Expiry date</strong></p><select class="month-day"><optgroup label="day-mon"><option value="12" selected="">01-Jan</option><option value="13">This is item 2</option><option value="14">This is item 3</option></optgroup></select>
+                                    <input
+                                        type="number" placeholder="2018" min="2018" max="2030" step="1" class="CVC"></div>
+                                <div id="carddetails">
+                                    <p class="carddetails"><strong>CVC-Code</strong></p><input type="number" class="CVC"></div>
+                            </div>
+                            <div class="col"><input type="checkbox" style="width:70px;height:20px;"><label class="col-form-label"><strong>PAYPAL</strong></label></div>
+                            <div class="col"><input type="checkbox" style="width:70px;height:20px;"><label class="col-form-label"><strong>My Wallet</strong></label></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" style="height:60px;"><input type="checkbox" style="width:70px;height:20px;margin-top:20px;"><label class="col-form-label">Add this credit card to your account for faster booking</label>
+                            <fieldset></fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container checkbooking" style="height:99px;">
+            <p>I agree with the<a href="booking_conditions"> booking conditions</a> , <a href="general_terms">general terms </a>and<a href="privacy_conditions"> privacy policy</a> by making this booking</p><button class="btn btn-primary complete" type="button"><i class="fa fa-lock"></i>&nbsp; Complete booking</button>
+            <button
+                class="btn btn-secondary checkbooking" type="button">Check your booking</button>
+        </div>
+    </section>
+    <section>
+        <div style="height:9px;">
+            <p class="end">Don't worry - you won't pay until you enjoy the service !</p>
+        </div>
+    </section>
+    <div class="footer-basic">
+        <footer>
+            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="#">Services</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">Soleo Together Inc © 2018</p>
+        </footer>
+    </div>
+    <section>
+        <div class="row myaccount">
+            <div class="col-xl-12">
+                <ul class="nav nav-pills float-left">
+                    <li class="nav-item profile"><a class="nav-link" href="myprofile.html">My Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="wallet.html">Wallet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pastbookings.html">Past Bookings</a></li>
+                    <li class="nav-item"><a class="nav-link" href="manager.html">Manager</a></li>
+                </ul>
+            </div>
+        </div>
+        <section id="search-col"></section>
+    </section>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-google-maps/2.4.1/angular-google-maps.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/country-select-js/2.0.1/js/countrySelect.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/country-select-js/2.0.1/js/countrySelect.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-popup-overlay/1.7.9/jquery.popupoverlay.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.payment/3.0.0/jquery.payment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+    <script src="../assets/js/script.min.js"></script>
+</body>
+
+</html>
