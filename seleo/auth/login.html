@@ -41,15 +41,23 @@
                 dataType: 'json',        
                 success: function(data) {
                     console.log("connected successfully")
-                    window.location = "../backend/index.html";
+                    if(data.error) {
+                          
+                        $(".errmsg").append('<p><strong>Invalid Username or password. Please check your details and try again.</strong></p>');
+                        console.log("oti ya were, o fe ma lo invalid password funmi abi?")
+                        alert('invalid user/password');
+
+                    }else {
+                        window.location = "../backend/index.html";
                           }
-                error: function(err){
-                    console.log("Your username or password is not correct")
-                }
+                                }
                                         });    
            });
         });           
     </script>
+   
+
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
 </body>
 
