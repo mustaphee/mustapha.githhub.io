@@ -1,0 +1,9 @@
+body {
+    background: #eff3f5 !important;
+}
+
+#pics {
+    position: relative;
+    top: 72px;
+    left: 100px;
+}
