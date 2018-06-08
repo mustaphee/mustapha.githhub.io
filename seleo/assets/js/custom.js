@@ -1,5 +1,60 @@
 var base_url = "http://45.33.45.243:8888/rest-auth/"
 
+$(document).ready(function(){
+    $("div.load-bar").hide()
+
+    $("#login").on("click",function(ev){
+        ev.preventDefault()
+        $("div.load-bar").show()
+        console.log("I am sending")
+        var login_details = {
+            "username": $("#username").val(),
+            "password": $("#password").val(),
+        }
+        
+        $.ajax({
+            type: "POST",
+            url: base_url+"login/",
+            data: login_details,
+            dataType: 'json',
+            success: function (data) {
+                console.log("connected successfully")
+                $("div.load-bar").hide()
+                swal({
+                    title: "Successful!",
+                    text: "Login successful",
+                    icon: "success",
+                    timer: 2000,
+                    button: false
+                  }).then(
+                    function() {
+                        window.location = "../backend/index.html";
+                    },
+                    // handling the promise rejection
+                    function(dismiss) {
+                      if (dismiss === 'timer') {
+                        window.location = "../backend/index.html";
+                      }
+                    }
+                  );
+                //window.location = "../backend/index.html";
+            },
+    
+            error: function (err) {
+                $("div.load-bar").hide()
+                var errText = JSON.parse(err.responseText).non_field_errors[0]
+                console.log(errText);
+                swal({
+                    title: "An error occured",
+                    text: errText,
+                    icon: "error",
+                    button: "Ok",
+                  });
+            }
+        });
+    })
+});
+
 
 function signup(e) {
     e.preventDefault();
@@ -10,6 +65,7 @@ function signup(e) {
         "password1": $("#password1").val(),
         "password2": $("#password2").val()
     }
+    
     $.ajax({
         type: "POST",
         url: base_url + "registration/",
@@ -32,6 +88,8 @@ function login(e){
         "username": $("#username").val(),
         "password": $("#password").val(),
     }
+    
+    $("div.load-bar").show();
     $.ajax({
         type: "POST",
         url: base_url+"login/",
@@ -44,6 +102,7 @@ function login(e){
 
         error: function (err) {
             console.log("Your username or password is not correct")
+            
         }
     });
 }
