@@ -8,14 +8,21 @@
   <title>Seleo- Register</title>
   <!-- plugins:css -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <!-- inject:css -->
   <link rel="stylesheet" href="../assets/css/style.css">
   <!-- endinject -->
   <script src="../assets/js/custom.js"></script>
+  
+  <link rel="stylesheet" href="../assets/css/loader.css">
   <link rel="shortcut icon" href="../assets/img/logosoleo.png" />
 </head>
 
 <body>
+    <div class="load-bar">
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
   <div class="container-scroller">
     <div class="container-fluid page-body-wrapper full-page-wrapper">
       <div class="content-wrapper d-flex align-items-center auth register-bg-1 theme-one">
@@ -68,13 +75,13 @@
                 </div>
                 <div class="form-group d-flex justify-content-center">
                   <div class="form-check form-check-flat mt-0">
-                    <label class="form-check-label">
+                    <label class="form-check-label"></label>
                       <input type="checkbox" class="form-check-input"> I am a service provider
-                    </label>
+                    
                   </div>
                 </div>
                 <div class="form-group">
-                  <button class="btn btn-primary submit-btn btn-block" id="register" onclick="signup()">Register</button>
+                  <button class="btn btn-primary submit-btn btn-block" id="register" >Register</button>
                 </div>
                 <div class="text-block text-center my-3">
                   <span class="text-small font-weight-semibold">Already have an account ?</span>
