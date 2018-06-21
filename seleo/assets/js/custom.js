@@ -105,4 +105,19 @@ function login(e){
             
         }
     });
+
+function(){
+	if (navigator.geolocation) {
+		var getLocation = navigator.geolocation.getPosition(){
+			console.log(position.coords.latitude);
+			console.log(position.coords.longitude);
+
+		};
+
+	} else{
+		error(Geolocation cannot be determined);
+	}
+	
+}
+
 }
