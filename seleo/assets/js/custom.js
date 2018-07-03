@@ -1,6 +1,9 @@
 var base_url = "http://45.33.45.243:8888/rest-auth/"
 
 $(document).ready(function(){
+
+// Login Page test request
+
     $("div.load-bar").hide()
 
     $("#login").on("click",function(ev){
@@ -8,7 +11,7 @@ $(document).ready(function(){
         $("div.load-bar").show()
         console.log("I am sending")
         var login_details = {
-            "username": $("#username").val(),
+            "email": $("#email").val(),
             "password": $("#password").val(),
         }
         
@@ -28,12 +31,12 @@ $(document).ready(function(){
                     button: false
                   }).then(
                     function() {
-                        window.location = "../backend/index.html";
+                        window.location = "../backend/dashboard.html";
                     },
                     // handling the promise rejection
                     function(dismiss) {
                       if (dismiss === 'timer') {
-                        window.location = "../backend/index.html";
+                        window.location = "../backend/daasboard.html";
                       }
                     }
                   );
@@ -53,14 +56,17 @@ $(document).ready(function(){
             }
         });
     })
-});
 
+// Signup page test request
 
-function signup(e) {
+    $("div.load-bar").hide()
+    $("#signup").on("click",function(e){
     e.preventDefault();
+    $("div.load-bar").show()
     console.log("I am sending")
     var signup_details = {
-        "username": $("#username").val(),
+        "first_name": $("#firstname").val(),
+        "last_name": $("#lastname").val(),
         "email": $("#email").val(),
         "password1": $("#password1").val(),
         "password2": $("#password2").val()
@@ -73,51 +79,49 @@ function signup(e) {
         dataType: 'json',
         success: function (data) {
             console.log("Connected successfully")
-            window.location = "../backend/index.html";
-        },
-        error: function (err) {
-            console.log("Your username or password is not correct")
-        }
-    });
-}
-
-function login(e){
-    e.preventDefault();
-    console.log("I am sending")
-    var login_details = {
-        "username": $("#username").val(),
-        "password": $("#password").val(),
-    }
+            $("div.load-bar").hide()
+                swal({
+                    title: "Successful!",
+                    text: "Registration successful",
+                    icon: "success",
+                    timer: 2000,
+                    button: false
+                  }).then(
+                    function() {
+                        window.location = "../backend/dashboard.html";
+                    },
+                    // handling the promise rejection
+                    function(dismiss) {
+                      if (dismiss === 'timer') {
+                        window.location = "../backend/dashboard.html";
+                      }
+                    }
+                  );
+                //window.location = "../backend/index.html";
+            },
     
-    $("div.load-bar").show();
-    $.ajax({
-        type: "POST",
-        url: base_url+"login/",
-        data: login_details,
-        dataType: 'json',
-        success: function (data) {
-            console.log("connected successfully")
-            window.location = "../backend/index.html";
-        },
-
-        error: function (err) {
-            console.log("Your username or password is not correct")
-            
-        }
+            error: function (err) {
+                $("div.load-bar").hide()
+                // var errText = JSON.parse(err.responseText).non_field_errors[0]
+                console.log(errText);
+                swal({
+                    title: "An error occured",
+                    text: errText,
+                    icon: "error",
+                    button: "Ok",
+                  });
+            }
     });
+});
 
-function(){
-	if (navigator.geolocation) {
-		var getLocation = navigator.geolocation.getPosition(){
-			console.log(position.coords.latitude);
-			console.log(position.coords.longitude);
-
-		};
-
-	} else{
-		error(Geolocation cannot be determined);
-	}
-	
-}
-
-}
+// Geolocation capturing code
+if ("geolocation" in navigator){
+    navigator.geolocation.getCurrentPosition(function(position){ 
+            var long =position.coords.longitude;
+            var lat =position.coords.latitude;
+            console.log(long);
+            console.log(lat);            
+            console.log("Found your location \nLat : "+position.coords.latitude+" \nLang :"+ position.coords.longitude);
+        });
+    }
+});
