@@ -1,0 +1,185 @@
+/* css resets */
+* {
+    margin: 0;
+    padding: 0;
+}
+/* general style rules */
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18 px;
+    padding: 0;
+    margin: auto 0;
+    background-color:  white;
+    color: black;
+}
+/* social media connections*/
+.connections {
+    color: black;
+    margin: 15px 20px ;
+    padding: 5px 30px;
+    font-size: 16px;
+    text-decoration: none;
+}
+.fab {
+    color: black;
+    font-size: 30px;
+    float: right;
+    margin-right: 15px;
+}
+.connections .mail {
+    color: black;
+    text-decoration: underline;
+}
+/* display picture styling */
+.content img {
+    display: block;
+    height: 175px;
+    width: 175px;
+    margin: 15px;
+    border: 3px solid skyblue;
+    border-radius: 50%;
+    align-content: center;
+    margin: 0 auto;
+}
+ /* styling the text  */
+.content {
+    padding: 10px 50px;
+    color: black;
+    font-style: normal;
+    font: 50;
+    align-content: center;
+    margin: 0 auto;
+}
+.content h1 {
+    padding-top: 20px;
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+}
+.content h5 {
+    color: grey;
+    padding-top: 5px;
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+}
+.content p  {
+    padding: 8px 70px;
+    text-align: justify;
+    font-size: 16px;
+} 
+ /* skillset  */
+ .skills {
+    /* padding: 3px 30px; */
+    padding: 15px 30px;
+    margin: 15px 30px;
+    text-align: justify;
+    font-size: 16px;
+ }
+ .skills ul {
+    list-style: none;  
+ }
+ .skills li {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-right: 10px;
+    border-radius: 7px;
+    background-color: aqua;
+}
+.skills ul :hover {
+    border: 1px solid aquamarine;
+}
+/* links */
+.link {
+    padding-top: 15px; 
+    margin: 0 auto;  
+    text-align: center;
+}
+.link a {
+    text-decoration: underline;
+    padding: 10px 15px;
+    color: black;
+}
+
+
+
+/* responsive web design */
+@media (max-width: 500px) {
+    
+    .connections {
+        margin: 10px 25px ;
+        padding: 5px 10px;
+        font-size: 14px;
+        text-decoration: none;
+    }
+    .fab {
+        font-size: 25px;
+        float: right;
+        margin-right: 6px;
+    }
+    /* display picture styling */
+    .content img {
+    display: block;
+    height: 150px;
+    width: 150px;
+    margin: 20px 15px;
+    border: 3px solid grey;
+    border-radius: 50%;
+    align-content: center;
+    margin: 0 auto;
+    }
+    /* styling the text  */
+    .content {
+    padding: 10px 20px;
+    font-style: normal;
+    align-content: center;
+    margin: 0 auto;
+    }
+    .content h1 {
+        padding-top: 20px;
+        margin: 0;
+        font-size: 24px;
+        text-align: center;
+    }
+    .content h5 {
+    padding-top: 5px;
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+    }
+    .content p  {
+        padding: 8px 30px;
+        text-align: justify;
+        font-size: 16px;
+    } 
+    /* skillset  */
+    .skills {
+        padding: 3px 15px;
+        text-align: justify;
+        font-size: 14px;
+     }
+     .skills ul {
+        list-style: none;
+
+     }
+     .skills li {
+        display: inline-block;
+        padding: 10px 15px;
+        margin: 5px 2px;
+        border-radius: 7px;
+    }
+    .skills ul :hover {
+        border: 1px solid aquamarine;
+    }
+    /* links */
+    .link {
+        padding-top: 15px; 
+        margin: 0 auto;  
+        text-align: center;
+    }
+    .link a {
+        text-decoration: underline;
+        padding: 10px 5px;
+    }
+
+}
